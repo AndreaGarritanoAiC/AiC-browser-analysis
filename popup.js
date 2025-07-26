@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
     const currentUrl = tabs[0].url;
 
-    if (currentUrl.startsWith('https://pvp.giustizia.it/pvp/it/detail_annuncio.page')) {
+    if (currentUrl.startsWith('https://pvp.giustizia.it/pvp/it/detail_annuncio.page') || currentUrl.startsWith('https://www.astegiudiziarie.it/vendita-asta')) {
       message.textContent = "Vuoi analizzare questo immmobile?";
       button.classList.remove('hidden');
 
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         chrome.tabs.create({ url: destination });
       });
     } else {
-      message.textContent = "Questa estensione funziona solo su annunci immobiliari di pvp.giustizia.it";
+      message.textContent = "Questa estensione funziona solo su annunci immobiliari di pvp.giustizia.it e astegiudiziarie.it";
     }
   });
 });
