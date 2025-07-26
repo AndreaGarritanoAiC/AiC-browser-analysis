@@ -1,13 +1,81 @@
-/* Tailwind estratto minimale per il popup */ 
-body { display: flex; align-items: center; justify-content: center; height: 8rem; width: 12rem; background-color: white; }
-.text-center { text-align: center; }
-.text-gray-700 { color: #374151; }
-.mb-2 { margin-bottom: 0.5rem; }
-.px-4 { padding-left: 1rem; padding-right: 1rem; }
-.py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
-.bg-blue-500 { background-color: #3B82F6; }
-.text-white { color: white; }
-.rounded { border-radius: 0.25rem; }
-.hover\:bg-blue-600:hover { background-color: #2563EB; }
-.transition { transition: all 0.2s; }
-.hidden { display: none; }
+body {
+  width: 300px;
+  height: auto;
+  font-family: sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+}
+
+#content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+#message {
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#message a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+#message a:hover {
+  text-decoration: underline;
+}
+
+.message-info {
+  background-color: #e6f7ff;
+  border: 1px solid #91d5ff;
+  color: #0050b3;
+}
+
+.message-warning {
+  background-color: #fffbe6;
+  border: 1px solid #ffe58f;
+  color: #ad8b00;
+}
+
+#analyze {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#analyze:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.hidden {
+  display: none;
+}
